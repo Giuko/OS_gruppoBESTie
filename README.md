@@ -6,7 +6,7 @@ Gruppo per EOS (Il meglio)
 - **I/O**: UART, ADC 
 
 ## Useful links 
-[![Trello](https://img.shields.io/badge/Trello--blue?logo=trello&style=flat)](https://trello.com/invite/b/6304f31de3ead204953aae2a/ATTI800853acd51f825411531aeb6e5f9aa14ACBA004/eos)
+[![Trello](https://img.shields.io/badge/Trello--blue?logo=trello&style=flat)](https://github.com/users/Giuko/projects/1/views/1)
 
 [![Documentation](https://img.shields.io/badge/Documentation--brightgreen?style=flat)](https://fgoehler.com/blog/adding-a-new-architecture-to-qemu-01/)
 
