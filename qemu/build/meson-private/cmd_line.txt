@@ -1,0 +1,7 @@
+[options]
+docs = disabled
+plugins = true
+
+[properties]
+native_file = ['/home/andrea/Desktop/sstic-tame-the-qemu/qemu/build/config-meson.cross']
+
