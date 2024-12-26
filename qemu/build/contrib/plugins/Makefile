@@ -1,1 +1,1 @@
-/home/andrea/Desktop/sstic-tame-the-qemu/qemu/contrib/plugins/Makefile
+/media/andrea/Acer/OS_gruppoBESTie/qemu/contrib/plugins/Makefile

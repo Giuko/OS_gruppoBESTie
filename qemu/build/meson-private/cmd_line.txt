@@ -3,5 +3,5 @@ docs = disabled
 plugins = true
 
 [properties]
-native_file = ['/home/andrea/Desktop/sstic-tame-the-qemu/qemu/build/config-meson.cross']
+native_file = ['/media/andrea/Acer/OS_gruppoBESTie/qemu/build/config-meson.cross']
 

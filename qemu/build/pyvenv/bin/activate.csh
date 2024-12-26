@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/andrea/Desktop/sstic-tame-the-qemu/qemu/build/pyvenv
+setenv VIRTUAL_ENV /media/andrea/Acer/OS_gruppoBESTie/qemu/build/pyvenv
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"

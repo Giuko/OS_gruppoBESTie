@@ -34,6 +34,59 @@ static void s32k3x8evb_init(MachineState *machine)
     qdev_prop_set_string(DEVICE(&s->cpu), "cpu-type", ARM_CPU_TYPE_NAME("cortex-m7"));
     qdev_prop_set_uint32(DEVICE(&s->cpu), "num-irq", 240);  // Cortex-M7 supports up to 240 IRQs
 
+    //Todo: memory initialization failed
+
+    object_property_set_link(OBJECT(&s->cpu), "memory",OBJECT(&s->container),&err);
+
+    /*
+    memory_region_init_ram(&s->sram, OBJECT(s), "cortex_m7.sram",
+                           s->sram_size, &err);
+    if (err) {
+        error_propagate(errp, err);
+        return;
+    }
+
+    //Map the SRAM memory region into the memory container
+
+    memory_region_add_subregion(&s->container, CORTEX_M7_SRAM_BASE, &s->sram);
+}
+    */
+    //TODO: fix this
+
+
+    /*
+
+    armv7m = DEVICE(&a->armv7m);
+      qdev_prop_set_uint32(armv7m, "num-irq", 256);
+      qdev_prop_set_string(armv7m, "cpu-type", aspeed_soc_cpu_type(sc));
+      qdev_connect_clock_in(armv7m, "cpuclk", s->sysclk);
+      object_property_set_link(OBJECT(&a->armv7m), "memory",
+                               OBJECT(s->memory), &error_abort);
+      sysbus_realize(SYS_BUS_DEVICE(&a->armv7m), &error_abort);
+
+
+      sram_name = g_strdup_printf("aspeed.sram.%d",
+                                  CPU(a->armv7m.cpu)->cpu_index);
+      memory_region_init_ram(&s->sram, OBJECT(s), sram_name, sc->sram_size, &err);
+      if (err != NULL) {
+          error_propagate(errp, err);
+          return;
+      }
+
+
+
+
+
+
+
+
+    */
+
+
+
+
+    cpu->sysclk = qdev_init_clock_in(DEVICE(s), "sysclk", NULL, NULL,0);
+
     // Realize the CPU
     sysbus_realize(SYS_BUS_DEVICE(&s->cpu), &err);
     if (err) {

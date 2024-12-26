@@ -363,7 +363,7 @@
 
 #undef CONFIG_TSAN
 
-#define CONFIG_USBFS
+#undef CONFIG_USBFS
 
 #undef CONFIG_USB_LIBUSB
 

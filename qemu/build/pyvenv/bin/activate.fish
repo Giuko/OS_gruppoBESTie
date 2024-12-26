@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/andrea/Desktop/sstic-tame-the-qemu/qemu/build/pyvenv
+set -gx VIRTUAL_ENV /media/andrea/Acer/OS_gruppoBESTie/qemu/build/pyvenv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

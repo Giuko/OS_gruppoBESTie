@@ -1,8 +1,8 @@
 libqemu-arm-softmmu.fa.p/hw_arm_virt-acpi-build.c.o: \
  ../hw/arm/virt-acpi-build.c /usr/include/stdc-predef.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/osdep.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/osdep.h \
  config-host.h arm-softmmu-config-target.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/compiler.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/compiler.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
@@ -109,9 +109,9 @@ libqemu-arm-softmmu.fa.p/hw_arm_virt-acpi-build.c.o: \
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
  linux-headers/asm/bitsperlong.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/asm-generic/bitsperlong.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/asm-generic/bitsperlong.h \
  /usr/include/linux/posix_types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/linux/stddef.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/linux/stddef.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
  /usr/include/asm-generic/posix_types.h \
@@ -147,7 +147,7 @@ libqemu-arm-softmmu.fa.p/hw_arm_virt-acpi-build.c.o: \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
  /usr/include/x86_64-linux-gnu/sys/wait.h \
  /usr/include/x86_64-linux-gnu/bits/types/idtype_t.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/glib-compat.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/glib-compat.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
@@ -229,7 +229,7 @@ libqemu-arm-softmmu.fa.p/hw_arm_virt-acpi-build.c.o: \
  /usr/include/glib-2.0/glib/glib-autocleanups.h \
  /usr/include/glib-2.0/glib-unix.h /usr/include/glib-2.0/glib/gstdio.h \
  /usr/include/glib-2.0/glib/gprintf.h /usr/include/pwd.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/os-posix.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/os-posix.h \
  /usr/include/x86_64-linux-gnu/sys/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
@@ -252,158 +252,158 @@ libqemu-arm-softmmu.fa.p/hw_arm_virt-acpi-build.c.o: \
  /usr/include/x86_64-linux-gnu/sys/un.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/typedefs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qapi/error.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/typedefs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qapi/error.h \
  qapi/qapi-types-error.h qapi/qapi-builtin-types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qapi/util.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bitmap.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bitops.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/host-utils.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bswap.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/int128.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/atomic.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/compiler.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/error-report.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qapi/util.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bitmap.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bitops.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/host-utils.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bswap.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/int128.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/atomic.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/compiler.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/error-report.h \
  ../hw/arm/trace.h trace/trace-hw_arm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/control.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/event-internal.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/control-internal.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/log-for-trace.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/core/cpu.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/qdev-core.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/atomic.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/queue.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/rcu.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/thread.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/processor.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/clang-tsa.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/thread-posix.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/control.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/event-internal.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/control-internal.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/log-for-trace.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/core/cpu.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/qdev-core.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/atomic.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/queue.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/rcu.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/thread.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/processor.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/clang-tsa.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/thread-posix.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/qsp.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/notify.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/sys_membarrier.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/coroutine-tls.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/rcu_queue.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qom/object.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/module.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/hotplug.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/resettable.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/disas/dis-asm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/cpu-common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/hwaddr.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memattrs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/tlb-common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/qsp.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/notify.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/sys_membarrier.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/coroutine-tls.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/rcu_queue.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qom/object.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/module.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/hotplug.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/resettable.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/disas/dis-asm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/cpu-common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/hwaddr.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memattrs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/tlb-common.h \
  qapi/qapi-types-run-state.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/plugin-event.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/target/arm/cpu.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/target/arm/kvm-consts.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/cpu-float.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/fpu/softfloat-types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/registerfields.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/target/arm/cpu-qom.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/cpu-defs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/host-utils.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/plugin-event.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/target/arm/cpu.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/target/arm/kvm-consts.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/cpu-float.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/fpu/softfloat-types.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/registerfields.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/target/arm/cpu-qom.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/cpu-defs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/host-utils.h \
  ../target/arm/cpu-param.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/target_long.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/target_long.h \
  qapi/qapi-types-common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/cpu-all.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memory.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memop.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/ramlist.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/range.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memory_ldst.h.inc \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memory_ldst_phys.h.inc \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/memory_ldst_cached.h.inc \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/tswap.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/page-vary.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/acpi-defs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/acpi.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/acpi_dev_interface.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/cpu-all.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memory.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memop.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/ramlist.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/range.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memory_ldst.h.inc \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memory_ldst_phys.h.inc \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/memory_ldst_cached.h.inc \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/tswap.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/page-vary.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/acpi-defs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/acpi.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/acpi_dev_interface.h \
  qapi/qapi-types-acpi.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/nvram/fw_cfg.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/standard-headers/linux/qemu_fw_cfg.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/standard-headers/linux/types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/sysbus.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/dma.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/address-spaces.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/block.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/block-global-state.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/block-common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/nvram/fw_cfg.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/standard-headers/linux/qemu_fw_cfg.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/standard-headers/linux/types.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/sysbus.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/dma.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/address-spaces.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/block.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/block-global-state.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/block-common.h \
  qapi/qapi-types-block-core.h qapi/qapi-types-common.h \
  qapi/qapi-types-crypto.h qapi/qapi-types-job.h qapi/qapi-types-sockets.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/blockjob.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/job.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/blockjob.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/job.h \
  qapi/qapi-types-job.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/progress_meter.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/coroutine.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/coroutine-core.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/timer.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/lockable.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/aio.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/event_notifier.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/graph-lock.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/ratelimit.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/transactions.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/progress_meter.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/coroutine.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/coroutine-core.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/timer.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/lockable.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/aio.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/event_notifier.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/graph-lock.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/ratelimit.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/transactions.h \
  /usr/include/glib-2.0/gmodule.h \
  /usr/include/glib-2.0/gmodule/gmodule-visibility.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/block-io.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/aio-wait.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/main-loop.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/event-loop-base.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/iov.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/block/accounting.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/timed-average.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/bios-linker-loader.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/aml-build.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/utils.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/pci.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/acpi_aml_interface.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/memory_hotplug.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/generic_event_device.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/ghes.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/acpi/tpm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/units.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/tpm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/block-io.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/aio-wait.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/main-loop.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/event-loop-base.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/iov.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/block/accounting.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/timed-average.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/bios-linker-loader.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/aml-build.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/utils.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/pci.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/acpi_aml_interface.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/memory_hotplug.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/generic_event_device.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/ghes.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/acpi/tpm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/units.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/tpm.h \
  qapi/qapi-types-tpm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/hw/acpi/hmat.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/numa.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/hw/acpi/hmat.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/numa.h \
  qapi/qapi-types-machine.h qapi/qapi-types-machine-common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pcie_host.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci_host.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/isa/isa.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/ioport.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci_ids.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci_regs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/standard-headers/linux/pci_regs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci_bus.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci-host/gpex.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pci_device.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pcie.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pcie_regs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pcie_aer.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/pci/pcie_sriov.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/arm/virt.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/boards.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/hostmem.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/thread-context.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/blockdev.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/arm/boot.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/target/arm/cpu-qom.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/arm/bsa.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/block/flash.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/kvm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/accel.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pcie_host.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci_host.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/isa/isa.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/ioport.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci_ids.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci_regs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/standard-headers/linux/pci_regs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci_bus.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci-host/gpex.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pci_device.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pcie.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pcie_regs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pcie_aer.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/pci/pcie_sriov.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/arm/virt.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/boards.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/hostmem.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/thread-context.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/blockdev.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/arm/boot.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/target/arm/cpu-qom.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/arm/bsa.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/block/flash.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/kvm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/accel.h \
  ../target/arm/cpu.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/intc/arm_gicv3_common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/intc/arm_gic_common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/intc/arm_gicv3_its_common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/mem/nvdimm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/mem/pc-dimm.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/uuid.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/platform-bus.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/reset.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/intc/arm_gicv3_common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/intc/arm_gic_common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/intc/arm_gicv3_its_common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/mem/nvdimm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/mem/pc-dimm.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/uuid.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/platform-bus.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/reset.h \
  qapi/qapi-events-run-state.h qapi/qapi-types-run-state.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/migration/vmstate.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/hw/vmstate-if.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/hw/acpi/viot.h
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/migration/vmstate.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/hw/vmstate-if.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/hw/acpi/viot.h

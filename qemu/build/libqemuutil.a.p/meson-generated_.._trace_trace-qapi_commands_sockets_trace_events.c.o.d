@@ -1,11 +1,11 @@
 libqemuutil.a.p/meson-generated_.._trace_trace-qapi_commands_sockets_trace_events.c.o: \
  trace/trace-qapi_commands_sockets_trace_events.c \
  /usr/include/stdc-predef.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/osdep.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/osdep.h \
  config-host.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/poison.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/poison.h \
  config-poison.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/compiler.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/compiler.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
@@ -112,9 +112,9 @@ libqemuutil.a.p/meson-generated_.._trace_trace-qapi_commands_sockets_trace_event
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
  linux-headers/asm/bitsperlong.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/asm-generic/bitsperlong.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/asm-generic/bitsperlong.h \
  /usr/include/linux/posix_types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/linux/stddef.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/linux/stddef.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
  /usr/include/asm-generic/posix_types.h \
@@ -150,7 +150,7 @@ libqemuutil.a.p/meson-generated_.._trace_trace-qapi_commands_sockets_trace_event
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
  /usr/include/x86_64-linux-gnu/sys/wait.h \
  /usr/include/x86_64-linux-gnu/bits/types/idtype_t.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/glib-compat.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/glib-compat.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
@@ -232,7 +232,7 @@ libqemuutil.a.p/meson-generated_.._trace_trace-qapi_commands_sockets_trace_event
  /usr/include/glib-2.0/glib/glib-autocleanups.h \
  /usr/include/glib-2.0/glib-unix.h /usr/include/glib-2.0/glib/gstdio.h \
  /usr/include/glib-2.0/glib/gprintf.h /usr/include/pwd.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/os-posix.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/os-posix.h \
  /usr/include/x86_64-linux-gnu/sys/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
@@ -255,11 +255,11 @@ libqemuutil.a.p/meson-generated_.._trace_trace-qapi_commands_sockets_trace_event
  /usr/include/x86_64-linux-gnu/sys/un.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/typedefs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/module.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/typedefs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/module.h \
  trace/trace-qapi_commands_sockets_trace_events.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/control.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/event-internal.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/trace/control-internal.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/log-for-trace.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/error-report.h
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/control.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/event-internal.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/trace/control-internal.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/log-for-trace.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/error-report.h

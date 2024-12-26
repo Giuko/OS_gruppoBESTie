@@ -1,1 +1,1 @@
-/home/andrea/Desktop/sstic-tame-the-qemu/qemu/pc-bios/vof/Makefile
+/media/andrea/Acer/OS_gruppoBESTie/qemu/pc-bios/vof/Makefile

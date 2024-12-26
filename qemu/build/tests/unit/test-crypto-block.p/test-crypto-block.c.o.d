@@ -1,10 +1,10 @@
 tests/unit/test-crypto-block.p/test-crypto-block.c.o: \
  ../tests/unit/test-crypto-block.c /usr/include/stdc-predef.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/osdep.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/osdep.h \
  config-host.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/exec/poison.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/exec/poison.h \
  config-poison.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/compiler.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/compiler.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
@@ -111,9 +111,9 @@ tests/unit/test-crypto-block.p/test-crypto-block.c.o: \
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
  linux-headers/asm/bitsperlong.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/asm-generic/bitsperlong.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/asm-generic/bitsperlong.h \
  /usr/include/linux/posix_types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/linux-headers/linux/stddef.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/linux-headers/linux/stddef.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
  /usr/include/asm-generic/posix_types.h \
@@ -149,7 +149,7 @@ tests/unit/test-crypto-block.p/test-crypto-block.c.o: \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
  /usr/include/x86_64-linux-gnu/sys/wait.h \
  /usr/include/x86_64-linux-gnu/bits/types/idtype_t.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/glib-compat.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/glib-compat.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
@@ -231,7 +231,7 @@ tests/unit/test-crypto-block.p/test-crypto-block.c.o: \
  /usr/include/glib-2.0/glib/glib-autocleanups.h \
  /usr/include/glib-2.0/glib-unix.h /usr/include/glib-2.0/glib/gstdio.h \
  /usr/include/glib-2.0/glib/gprintf.h /usr/include/pwd.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/sysemu/os-posix.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/sysemu/os-posix.h \
  /usr/include/x86_64-linux-gnu/sys/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
@@ -254,42 +254,42 @@ tests/unit/test-crypto-block.p/test-crypto-block.c.o: \
  /usr/include/x86_64-linux-gnu/sys/un.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/typedefs.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qapi/error.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/typedefs.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qapi/error.h \
  qapi/qapi-types-error.h qapi/qapi-builtin-types.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qapi/util.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/init.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/block.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/cipher.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qapi/util.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/init.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/block.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/cipher.h \
  qapi/qapi-types-crypto.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/ivgen.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/hash.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/crypto/block-luks-priv.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bswap.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/crypto/block-luks.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/crypto/blockpriv.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/thread.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/processor.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/atomic.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/compiler.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/clang-tsa.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/thread-posix.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/ivgen.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/hash.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/crypto/block-luks-priv.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bswap.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/crypto/block-luks.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/crypto/blockpriv.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/thread.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/processor.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/atomic.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/compiler.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/clang-tsa.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/thread-posix.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/qsp.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/afsplit.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/pbkdf.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/secret.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qom/object.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/module.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/secret_common.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/crypto/random.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/uuid.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bitmap.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/bitops.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/host-utils.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/int128.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/atomic.h \
- /home/andrea/Desktop/sstic-tame-the-qemu/qemu/include/qemu/buffer.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/qsp.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/afsplit.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/pbkdf.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/secret.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qom/object.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/module.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/secret_common.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/crypto/random.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/uuid.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bitmap.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/bitops.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/host-utils.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/int128.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/atomic.h \
+ /media/andrea/Acer/OS_gruppoBESTie/qemu/include/qemu/buffer.h \
  /usr/include/x86_64-linux-gnu/sys/resource.h \
  /usr/include/x86_64-linux-gnu/bits/resource.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h
