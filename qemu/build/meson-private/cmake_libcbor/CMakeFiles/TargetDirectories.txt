@@ -1,0 +1,2 @@
+/root/OS_project/qemu/build/meson-private/cmake_libcbor/CMakeFiles/edit_cache.dir
+/root/OS_project/qemu/build/meson-private/cmake_libcbor/CMakeFiles/rebuild_cache.dir
