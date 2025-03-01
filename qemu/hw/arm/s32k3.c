@@ -5,14 +5,18 @@
 #include "net/net.h"
 #include "hw/boards.h"
 #include "exec/address-spaces.h"
+#include "qemu/typedefs.h"
 #include "system/system.h"
 #include "system/reset.h"
 #include "hw/arm/armv7m.h"
+#include "hw/char/pl011.h"
 #include "hw/qdev-clock.h"
 #include "qom/object.h"
 #include "qobject/qlist.h"
 
 #include "hw/arm/s32k3.h"       /* Constants for memory allocation */
+#include "hw/arm/s32k3xx_uart.h"
+#include "hw/arm/s32k3xx_adc.h"
 
 static void s32k3_init(MachineState *machine){
     Error *err;
@@ -98,6 +102,21 @@ static void s32k3_init(MachineState *machine){
 
 
     /* Add peripherals (UART, ADC) */
+    static const int uart_irq = 5;      /* to check */
+
+    DeviceState *nvic, *uart;
+    SysBusDevice *sbd;
+
+    nvic = armv7m;
+    
+    uart = qdev_new("pl011_luminary");
+    object_property_add_child(soc_container, "uart", OBJECT(uart));
+    sbd = SYS_BUS_DEVICE(uart);
+    qdev_prop_set_chr(uart, "chardev", serial_hd(0));
+    sysbus_realize(sbd, &err);
+    sysbus_mmio_map(sbd, 0, LPUART_BASE_ADDRESS);
+    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, uart_irq));
+    
 }
 
 static void s32k3_machine_init(MachineClass *mc){
