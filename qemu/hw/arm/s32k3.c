@@ -6,6 +6,7 @@
 #include "hw/boards.h"
 #include "exec/address-spaces.h"
 #include "system/system.h"
+#include "system/reset.h"
 #include "hw/arm/armv7m.h"
 #include "hw/qdev-clock.h"
 #include "qom/object.h"
@@ -13,13 +14,11 @@
 
 #include "hw/arm/s32k3.h"       /* Constants for memory allocation */
 
-
 static void s32k3_init(MachineState *machine){
     Error *err;
     DeviceState *armv7m;
     Object *soc_container;
     Clock *cpuclk;
- //   MachineClass *mc = MACHINE_GET_CLASS(machine);
    
 
     /* MEMORY MAPPING */
@@ -76,16 +75,17 @@ static void s32k3_init(MachineState *machine){
     memory_region_add_subregion(system_memory, SRAM_BASE_ADDRESS, sram);    
 
     /* Define CPU */
+  
     armv7m = qdev_new(TYPE_ARMV7M);
-    object_property_add_child(soc_container, "v7m", OBJECT(armv7m)); 
+    object_property_add_child(soc_container, "v7m", OBJECT(armv7m));
     object_property_set_link(OBJECT(armv7m), "memory", OBJECT(get_system_memory()), &err);
 
-    qdev_prop_set_uint32(armv7m, "num-irq", 96);
+    qdev_prop_set_uint32(armv7m, "num-irq", 240);
     qdev_prop_set_string(armv7m, "cpu-type", machine->cpu_type);
     qdev_prop_set_bit(armv7m, "enable-bitband", true);
 
     cpuclk = clock_new(OBJECT(machine), "cpuclk");
-    clock_set_hz(cpuclk, 16 * 1000 * 1000);
+    clock_set_hz(cpuclk, 48 * 1000 * 1000);
     qdev_connect_clock_in(armv7m, "cpuclk", cpuclk);
 
     if (!sysbus_realize(SYS_BUS_DEVICE(armv7m), &err)) {
@@ -103,17 +103,8 @@ static void s32k3_init(MachineState *machine){
 static void s32k3_machine_init(MachineClass *mc){
     mc->desc = "NXP S32K3 (Cortex-M7)";
     mc->init = s32k3_init;
-    mc->default_ram_size = 128*1024*1024;
+    mc->default_ram_size = 1152*1024*1024;
     mc->default_cpu_type = ARM_CPU_TYPE_NAME("cortex-m7");
-
-    /* M-profile specific flags */
-    /* 
-    mc->no_cdrom = true;
-    mc->no_parallel = true;
-    mc->no_floppy = true;
-
-    mc->ignore_memory_transaction_failures = true;
-    */
 }
 
 DEFINE_MACHINE("s32k3", s32k3_machine_init)
