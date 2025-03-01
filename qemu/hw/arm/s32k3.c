@@ -2,23 +2,24 @@
 #include "qapi/error.h"
 #include "hw/sysbus.h"
 #include "hw/arm/boot.h"
+#include "net/net.h"
 #include "hw/boards.h"
 #include "exec/address-spaces.h"
 #include "system/system.h"
 #include "hw/arm/armv7m.h"
+#include "hw/qdev-clock.h"
 #include "qom/object.h"
+#include "qobject/qlist.h"
 
 #include "hw/arm/s32k3.h"       /* Constants for memory allocation */
-
-#define S32K3_RAM_SIZE ITCM_BLOCK_SIZE
 
 
 static void s32k3_init(MachineState *machine){
     Error *err;
-   // DeviceState *armv7m;
+    DeviceState *armv7m;
     Object *soc_container;
-
-    //   MachineClass *mc = MACHINE_GET_CLASS(machine);
+    Clock *cpuclk;
+ //   MachineClass *mc = MACHINE_GET_CLASS(machine);
    
 
     /* MEMORY MAPPING */
@@ -28,6 +29,7 @@ static void s32k3_init(MachineState *machine){
 
     /* g_new() to allocate memory */
     MemoryRegion *itcm      = g_new(MemoryRegion, 1);
+
 
     MemoryRegion *pflash    = g_new(MemoryRegion, 1);
     MemoryRegion *pflash0   = g_new(MemoryRegion, 1);
@@ -65,8 +67,8 @@ static void s32k3_init(MachineState *machine){
     memory_region_init_ram(sram1, NULL, "s32k3.sram1", SRAM_BLOCK_SIZE, &err);
     memory_region_init_ram(sram2, NULL, "s32k3.sram2", SRAM_BLOCK_SIZE, &err);
     memory_region_add_subregion(sram, SRAM0_OFFSET, sram0);
-    memory_region_add_subregion(sram, SRAM0_OFFSET, sram1);
-    memory_region_add_subregion(sram, SRAM0_OFFSET, sram2);
+    memory_region_add_subregion(sram, SRAM1_OFFSET, sram1);
+    memory_region_add_subregion(sram, SRAM2_OFFSET, sram2);
  
     memory_region_add_subregion(system_memory, ITCM_BASE_ADDRESS, itcm);
     memory_region_add_subregion(system_memory, PFLASH_BASE_ADDRESS, pflash);
@@ -74,22 +76,38 @@ static void s32k3_init(MachineState *machine){
     memory_region_add_subregion(system_memory, SRAM_BASE_ADDRESS, sram);    
 
     /* Define CPU */
-//    armv7m = qdev_new(TYPE_ARMV7M);
+    armv7m = qdev_new(TYPE_ARMV7M);
+    object_property_add_child(soc_container, "v7m", OBJECT(armv7m)); 
+    object_property_set_link(OBJECT(armv7m), "memory", OBJECT(get_system_memory()), &err);
+
+    qdev_prop_set_uint32(armv7m, "num-irq", 96);
+    qdev_prop_set_string(armv7m, "cpu-type", machine->cpu_type);
+    qdev_prop_set_bit(armv7m, "enable-bitband", true);
+
+    cpuclk = clock_new(OBJECT(machine), "cpuclk");
+    clock_set_hz(cpuclk, 16 * 1000 * 1000);
+    qdev_connect_clock_in(armv7m, "cpuclk", cpuclk);
+
+    if (!sysbus_realize(SYS_BUS_DEVICE(armv7m), &err)) {
+        error_reportf_err(err, "Could not realize ARMv7M device: ");
+        exit(1);
+    }
     
-//    object_property_set_link(OBJECT(armv7m), "memory", OBJECT(get_system_memory()), &err);
-//    object_property_add_child(soc_container, "v7m", OBJECT(armv7m));
-    
+    if(machine->kernel_filename)
+        armv7m_load_kernel(ARMV7M(armv7m)->cpu, machine->kernel_filename, 0, ITCM_BLOCK_SIZE);
+
+
     /* Add peripherals (UART, ADC) */
 }
 
 static void s32k3_machine_init(MachineClass *mc){
     mc->desc = "NXP S32K3 (Cortex-M7)";
     mc->init = s32k3_init;
-    mc->default_ram_size = S32K3_RAM_SIZE;
+    mc->default_ram_size = 128*1024*1024;
     mc->default_cpu_type = ARM_CPU_TYPE_NAME("cortex-m7");
 
     /* M-profile specific flags */
-    /*
+    /* 
     mc->no_cdrom = true;
     mc->no_parallel = true;
     mc->no_floppy = true;
