@@ -28,6 +28,7 @@ static void s32k3_init(MachineState *machine){
 
     /* MEMORY MAPPING */
 
+    /* Everything will be a child of the machine */
     soc_container = object_new(TYPE_CONTAINER);
     object_property_add_child(OBJECT(machine), "soc", soc_container);
 
@@ -119,8 +120,7 @@ static void s32k3_init(MachineState *machine){
     qdev_prop_set_chr(uart, "chardev", serial_hd(0));
     sysbus_realize(sbd, &err);
     sysbus_mmio_map(sbd, 0, LPUART_BASE_ADDRESS);
-    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, LPUART0_TRANSMIT_INTERRUPT));
-    
+    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, LPUART0_TRANSMIT_INTERRUPT)); 
 }
 
 static void s32k3_machine_init(MachineClass *mc){
