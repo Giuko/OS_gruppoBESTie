@@ -9,12 +9,13 @@
 #include "system/system.h"
 #include "system/reset.h"
 #include "hw/arm/armv7m.h"
-#include "hw/char/pl011.h"
+#include "hw/char/pl011.h"  /* using an already existing UART */
 #include "hw/qdev-clock.h"
 #include "qom/object.h"
 #include "qobject/qlist.h"
 
-#include "hw/arm/s32k3.h"       /* Constants for memory allocation */
+// Board memory region
+#include "hw/arm/s32k3.h"       
 #include "hw/arm/s32k3xx_uart.h"
 #include "hw/arm/s32k3xx_adc.h"
 
@@ -72,7 +73,8 @@ static void s32k3_init(MachineState *machine){
     memory_region_add_subregion(sram, SRAM0_OFFSET, sram0);
     memory_region_add_subregion(sram, SRAM1_OFFSET, sram1);
     memory_region_add_subregion(sram, SRAM2_OFFSET, sram2);
- 
+
+    /* All memory region are subregion of system memory*/
     memory_region_add_subregion(system_memory, ITCM_BASE_ADDRESS, itcm);
     memory_region_add_subregion(system_memory, PFLASH_BASE_ADDRESS, pflash);
     memory_region_add_subregion(system_memory, DFLASH_BASE_ADDRESS, dflash);
@@ -84,38 +86,40 @@ static void s32k3_init(MachineState *machine){
     object_property_add_child(soc_container, "v7m", OBJECT(armv7m));
     object_property_set_link(OBJECT(armv7m), "memory", OBJECT(get_system_memory()), &err);
 
-    qdev_prop_set_uint32(armv7m, "num-irq", 240);
+    qdev_prop_set_uint32(armv7m, "num-irq", S32K3X8_IRQ_NUM);
     qdev_prop_set_string(armv7m, "cpu-type", machine->cpu_type);
     qdev_prop_set_bit(armv7m, "enable-bitband", true);
 
     cpuclk = clock_new(OBJECT(machine), "cpuclk");
-    clock_set_hz(cpuclk, 48 * 1000 * 1000);
+    clock_set_hz(cpuclk, S32K3X8_STD_CLK);
     qdev_connect_clock_in(armv7m, "cpuclk", cpuclk);
 
+    /* saying to QEMU that the cpu interface with system bus */
     if (!sysbus_realize(SYS_BUS_DEVICE(armv7m), &err)) {
         error_reportf_err(err, "Could not realize ARMv7M device: ");
         exit(1);
     }
     
+    /* loading the kernel */
     if(machine->kernel_filename)
         armv7m_load_kernel(ARMV7M(armv7m)->cpu, machine->kernel_filename, 0, ITCM_BLOCK_SIZE);
 
 
     /* Add peripherals (UART, ADC) */
-    static const int uart_irq = 5;      /* to check */
+    /* UART */
 
     DeviceState *nvic, *uart;
     SysBusDevice *sbd;
 
     nvic = armv7m;
-    
+    /* implementing only LPUART01 */
     uart = qdev_new("pl011_luminary");
     object_property_add_child(soc_container, "uart", OBJECT(uart));
     sbd = SYS_BUS_DEVICE(uart);
     qdev_prop_set_chr(uart, "chardev", serial_hd(0));
     sysbus_realize(sbd, &err);
     sysbus_mmio_map(sbd, 0, LPUART_BASE_ADDRESS);
-    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, uart_irq));
+    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, LPUART0_TRANSMIT_INTERRUPT));
     
 }
 

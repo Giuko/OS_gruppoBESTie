@@ -12,4 +12,9 @@
 
 #define ADC_SIZE        (16    * 1024)
 
+/* End of conversion interrupt */
+#define ADC0_EOC            180
+#define ADC1_EOC            181
+#define ADC2_EOC            182
+
 #endif 
