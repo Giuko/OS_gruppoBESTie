@@ -120,6 +120,7 @@ static void s32k3_init(MachineState *machine){
     qdev_prop_set_chr(uart, "chardev", serial_hd(0));
     sysbus_realize(sbd, &err);
     sysbus_mmio_map(sbd, 0, LPUART_BASE_ADDRESS);
+    memory_region_set_size(sysbus_mmio_get_region(sbd, 0), UART_SIZE);
     sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, LPUART0_TRANSMIT_INTERRUPT)); 
 }
 
