@@ -6,7 +6,7 @@ AARCH = -mcpu=cortex-m7
 CFLAGS = -c -Wall $(AARCH) -mthumb 
 ASFLAGS = $(AARCH)
 LDFLAGS = -T $(ld_script).ld
-DEBUG_FLAGS = -g
+DEBUG_FLAGS = -g -s -S
 
 # Default target
 .DEFAULT_GOAL := all
@@ -15,14 +15,15 @@ DEBUG_FLAGS = -g
 ld_script = linker
 startup = startup
 main = main
+uart = uart
 
 # QEMU Configuration
 QEMU_FLAGS = -M s32k3 -nographic
 qemu_exec = ../qemu/build/qemu-system-arm $(QEMU_FLAGS) -kernel $(main).elf
 
 # Object files
-OBJS = $(startup).o $(main).o
-OBJS_DBG = $(startup)_dbg.o $(main)_dbg.o
+OBJS = $(startup).o $(main).o $(uart).o
+OBJS_DBG = $(startup)_dbg.o $(main)_dbg.o $(uart)_dbg.o
 
 # Rules
 # Compile and link
