@@ -1,5 +1,5 @@
-# QEMU configure log Fri Feb 28 18:03:37 CET 2025
-# Configured with: '/root/OS_project/qemu/configure' '--target-list=arm-softmmu'
+# QEMU configure log Tue Mar  4 12:39:36 CET 2025
+# Configured with: '../configure' '--target-list=arm-softmmu'
 
 #
 cc -c -o config-temp/qemu-conf.o config-temp/qemu-conf.c

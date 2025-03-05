@@ -31,4 +31,4 @@ unset STRIP
 unset WIDL
 unset WINDRES
 unset WINDMC
-exec '/root/OS_project/qemu/configure' '--target-list=arm-softmmu' "$@"
+exec '../configure' '--target-list=arm-softmmu' "$@"
