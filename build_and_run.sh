@@ -1,3 +1,4 @@
+mkdir qemu/build
 cd qemu/build/
 ../configure --target-list=arm-softmmu
 make

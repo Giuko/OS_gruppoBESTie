@@ -1,0 +1,3 @@
+qemu/build/**
+qemu/tests/**
+qemu-debug-log
