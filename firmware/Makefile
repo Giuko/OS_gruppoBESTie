@@ -5,20 +5,20 @@ ARM_GNU ?= arm-none-eabi
 AARCH = -mcpu=cortex-m7
 CFLAGS = -c -Wall $(AARCH) -mthumb 
 ASFLAGS = $(AARCH)
-LDFLAGS = -T $(ld_script).ld
+LDFLAGS = -T $(ld_script).ld $(AARCH) -nostartfiles -specs=nano.specs -specs=nosys.specs
 DEBUG_FLAGS = -g -s -S
 
 # Default target
 .DEFAULT_GOAL := all
 
 # Files
-ld_script = linker
+ld_script = s32k3
 startup = startup
 main = main
 uart = uart
 
 # QEMU Configuration
-QEMU_FLAGS = -M s32k3 -nographic
+QEMU_FLAGS = -M s32k3 -nographic -D ./qemu-debug-log
 qemu_exec = ../qemu/build/qemu-system-arm $(QEMU_FLAGS) -kernel $(main).elf
 
 # Object files
@@ -60,11 +60,11 @@ qemu_debug:
 # Linking
 # Link all the files defined in OBJS (.o files) to the main.elf file
 link:
-	$(ARM_GNU)-ld $(LDFLAGS) $(OBJS) -o $(main).elf
+	$(ARM_GNU)-gcc $(LDFLAGS) $(OBJS) -o $(main).elf
 
 # Link all the files defined in OBJS_DBG (_dbg.o files) to the main.elf file
 link_dbg:
-	$(ARM_GNU)-ld $(LDFLAGS) $(OBJS_DBG) -o $(main).elf
+	$(ARM_GNU)-gcc $(LDFLAGS) $(OBJS_DBG) -o $(main).elf
 
 # GDB
 gdb_start:
