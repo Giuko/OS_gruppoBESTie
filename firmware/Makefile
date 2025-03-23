@@ -16,14 +16,15 @@ ld_script = s32k3
 startup = startup
 main = main
 uart = uart
+adc = adc
 
 # QEMU Configuration
 QEMU_FLAGS = -M s32k3 -nographic -D ./qemu-debug-log
 qemu_exec = ../qemu/build/qemu-system-arm $(QEMU_FLAGS) -kernel $(main).elf
 
 # Object files
-OBJS = $(startup).o $(main).o $(uart).o
-OBJS_DBG = $(startup)_dbg.o $(main)_dbg.o $(uart)_dbg.o
+OBJS = $(startup).o $(main).o $(uart).o $(adc).o
+OBJS_DBG = $(startup)_dbg.o $(main)_dbg.o $(uart)_dbg.o $(adc)_dbg.o
 
 # Rules
 # Compile and link
