@@ -4,14 +4,17 @@
 #include "migration/vmstate.h"
 #include "qemu/log.h"
 #include "qemu/module.h"
-#include "hw/s32k3xx_adc.h"
+#include "hw/adc/s32k3xx_adc.h"
+#include "hw/irq.h"
+
 
 #define ADC_MAX_VALUE 0xFFF  // Massimo valore dell'ADC (12-bit)
 
 #define ADC_LOG(fmt, ...) qemu_log("%s: " fmt, __func__, ## __VA_ARGS__) //questo è ganzo, puoi linkare il log di qemu ad una call ADC_LOG- utile
 
 static uint32_t s32k3xx_adc_generate_value(S32K3XXADCState *s) {
-  //scegliere l'implementazione. Come facciamo?    //s->data = (s->data + 20) & ADC_MAX_VALUE; // Cambia il valore ad ogni lettura.
+  //scegliere l'implementazione. Come facciamo?
+    s->data = (s->data + 20) & ADC_MAX_VALUE; // Cambia il valore ad ogni lettura.
     return s->data;
 }
 
@@ -19,6 +22,8 @@ static uint32_t s32k3xx_adc_generate_value(S32K3XXADCState *s) {
  * Legge dai registri dell'ADC.
  */
 static uint64_t s32k3xx_adc_read(void *opaque, hwaddr addr, unsigned int size) {
+    qemu_log("ADC READ, addr %ld\n", addr);
+
     S32K3XXADCState *s = opaque;
     switch (addr) {
     case S32K3XX_ADC_CTRL:
@@ -27,6 +32,7 @@ static uint64_t s32k3xx_adc_read(void *opaque, hwaddr addr, unsigned int size) {
         return s->cfg;
     case S32K3XX_ADC_DATA:
         if ((s->ctrl & S32K3XX_ADC_ENABLE) && (s->ctrl & S32K3XX_ADC_START)) {
+            qemu_log("ADC correctly configured for read\n");
             s->ctrl &= ~S32K3XX_ADC_START; // Reset del bit START dopo la lettura
             uint32_t result = s32k3xx_adc_generate_value(s);
             qemu_irq_pulse(s->irq); // Segnala interruzione (conversione finita)
@@ -77,6 +83,8 @@ static void s32k3xx_adc_reset(DeviceState *dev) {
     s->ctrl = 0;
     s->cfg = 0;
     s->data = 0;
+    qemu_log("ADC reset\n");
+
 }
 
 static const VMStateDescription vmstate_s32k3xx_adc = {
@@ -96,6 +104,8 @@ static void s32k3xx_adc_init(Object *obj) {
     sysbus_init_irq(SYS_BUS_DEVICE(obj), &s->irq);
     memory_region_init_io(&s->mmio, obj, &s32k3xx_adc_ops, s, TYPE_S32K3XX_ADC, 0x0C);
     sysbus_init_mmio(SYS_BUS_DEVICE(obj), &s->mmio);
+    qemu_log("ADC Initialized\n");
+
 }
 
 static void s32k3xx_adc_class_init(ObjectClass *klass, void *data) {

@@ -13,11 +13,13 @@
 #include "hw/qdev-clock.h"
 #include "qom/object.h"
 #include "qobject/qlist.h"
+#include "qemu/log.h"
+
 
 // Board memory region
 #include "hw/arm/s32k3.h"       
 #include "hw/arm/s32k3xx_uart.h"
-#include "hw/arm/s32k3xx_adc.h"
+#include "hw/adc/s32k3xx_adc.h"
 
 static void s32k3_init(MachineState *machine){
     Error *err;
@@ -109,7 +111,7 @@ static void s32k3_init(MachineState *machine){
     /* Add peripherals (UART, ADC) */
     /* UART */
 
-    DeviceState *nvic, *uart;
+    DeviceState *nvic, *uart, *adc;
     SysBusDevice *sbd;
 
     nvic = armv7m;
@@ -122,6 +124,14 @@ static void s32k3_init(MachineState *machine){
     sysbus_mmio_map(sbd, 0, LPUART_BASE_ADDRESS);
     memory_region_set_size(sysbus_mmio_get_region(sbd, 0), UART_SIZE);
     sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, LPUART0_TRANSMIT_INTERRUPT)); 
+
+    adc = qdev_new(TYPE_S32K3XX_ADC);
+    object_property_add_child(soc_container, "adc", OBJECT(adc));
+    sbd = SYS_BUS_DEVICE(adc);
+    sysbus_realize(sbd, &err);
+    sysbus_mmio_map(sbd, 0, ADC_BASE_ADDRESS);
+    memory_region_set_size(sysbus_mmio_get_region(sbd, 0), ADC_SIZE);    
+    sysbus_connect_irq(sbd, 0, qdev_get_gpio_in(nvic, ADC0_EOC)); 
 }
 
 static void s32k3_machine_init(MachineClass *mc){
