@@ -21,10 +21,15 @@
 #include "fpu/softfloat-types.h"
 
 #include "cpu-qom.h"
+#include "exec/cpu-common.h"
 #include "exec/cpu-defs.h"
 #include "hex_regs.h"
 #include "mmvec/mmvec.h"
 #include "hw/registerfields.h"
+
+#ifndef CONFIG_USER_ONLY
+#error "Hexagon does not support system emulation"
+#endif
 
 #define NUM_PREGS 4
 #define TOTAL_PER_THREAD_REGS 64
@@ -152,7 +157,5 @@ typedef HexagonCPU ArchCPU;
 void hexagon_translate_init(void);
 void hexagon_translate_code(CPUState *cs, TranslationBlock *tb,
                             int *max_insns, vaddr pc, void *host_pc);
-
-#include "exec/cpu-all.h"
 
 #endif /* HEXAGON_CPU_H */

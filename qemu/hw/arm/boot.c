@@ -14,6 +14,8 @@
 #include <libfdt.h>
 #include "hw/arm/boot.h"
 #include "hw/arm/linux-boot-if.h"
+#include "cpu.h"
+#include "exec/target_page.h"
 #include "system/kvm.h"
 #include "system/tcg.h"
 #include "system/system.h"
@@ -660,8 +662,6 @@ int arm_load_dtb(hwaddr addr, const struct arm_boot_info *binfo,
     if (binfo->modify_dtb) {
         binfo->modify_dtb(binfo, fdt);
     }
-
-    qemu_fdt_dumpdtb(fdt, size);
 
     /* Put the DTB into the memory map as a ROM image: this will ensure
      * the DTB is copied again upon reset, even if addr points into RAM.

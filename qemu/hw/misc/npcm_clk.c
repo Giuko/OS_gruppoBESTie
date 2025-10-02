@@ -964,8 +964,9 @@ static void npcm_clk_enter_reset(Object *obj, ResetType type)
     NPCMCLKState *s = NPCM_CLK(obj);
     NPCMCLKClass *c = NPCM_CLK_GET_CLASS(s);
 
-    g_assert(sizeof(s->regs) >= c->nr_regs * sizeof(uint32_t));
-    memcpy(s->regs, c->cold_reset_values, sizeof(s->regs));
+    size_t sizeof_regs = c->nr_regs * sizeof(uint32_t);
+    g_assert(sizeof(s->regs) >= sizeof_regs);
+    memcpy(s->regs, c->cold_reset_values, sizeof_regs);
     s->ref_ns = qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL);
     npcm7xx_clk_update_all_clocks(s);
     /*
@@ -1107,6 +1108,8 @@ static void npcm7xx_clk_pll_class_init(ObjectClass *klass, void *data)
 
     dc->desc = "NPCM7xx Clock PLL Module";
     dc->vmsd = &vmstate_npcm7xx_clk_pll;
+    /* Reason: Part of NPCMCLKState component */
+    dc->user_creatable = false;
 }
 
 static void npcm7xx_clk_sel_class_init(ObjectClass *klass, void *data)
@@ -1115,6 +1118,8 @@ static void npcm7xx_clk_sel_class_init(ObjectClass *klass, void *data)
 
     dc->desc = "NPCM7xx Clock SEL Module";
     dc->vmsd = &vmstate_npcm7xx_clk_sel;
+    /* Reason: Part of NPCMCLKState component */
+    dc->user_creatable = false;
 }
 
 static void npcm7xx_clk_divider_class_init(ObjectClass *klass, void *data)
@@ -1123,6 +1128,8 @@ static void npcm7xx_clk_divider_class_init(ObjectClass *klass, void *data)
 
     dc->desc = "NPCM7xx Clock Divider Module";
     dc->vmsd = &vmstate_npcm7xx_clk_divider;
+    /* Reason: Part of NPCMCLKState component */
+    dc->user_creatable = false;
 }
 
 static void npcm_clk_class_init(ObjectClass *klass, void *data)

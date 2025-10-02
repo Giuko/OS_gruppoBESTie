@@ -13,34 +13,45 @@ endif
 test_timeouts = {
   'aarch64_aspeed' : 600,
   'aarch64_raspi4' : 480,
+  'aarch64_reverse_debug' : 180,
   'aarch64_rme_virt' : 1200,
   'aarch64_rme_sbsaref' : 1200,
-  'aarch64_sbsaref_alpine' : 720,
+  'aarch64_sbsaref_alpine' : 1200,
   'aarch64_sbsaref_freebsd' : 720,
+  'aarch64_smmu' : 720,
   'aarch64_tuxrun' : 240,
-  'aarch64_virt' : 720,
+  'aarch64_virt' : 360,
+  'aarch64_virt_gpu' : 480,
   'acpi_bits' : 420,
   'arm_aspeed_palmetto' : 120,
   'arm_aspeed_romulus' : 120,
-  'arm_aspeed_ast2500' : 480,
-  'arm_aspeed_ast2600' : 720,
-  'arm_aspeed_rainier' : 240,
+  'arm_aspeed_witherspoon' : 120,
+  'arm_aspeed_ast2500' : 720,
+  'arm_aspeed_ast2600' : 1200,
+  'arm_aspeed_bletchley' : 480,
+  'arm_aspeed_rainier' : 480,
   'arm_bpim2u' : 500,
   'arm_collie' : 180,
   'arm_cubieboard' : 360,
   'arm_orangepi' : 540,
   'arm_quanta_gsj' : 240,
   'arm_raspi2' : 120,
+  'arm_replay' : 240,
   'arm_tuxrun' : 240,
   'arm_sx1' : 360,
   'intel_iommu': 300,
-  'mips_malta' : 120,
+  'mips_malta' : 480,
+  'mipsel_malta' : 420,
   'mipsel_replay' : 480,
+  'mips64_malta' : 240,
+  'mips64el_malta' : 420,
+  'mips64el_replay' : 180,
   'netdev_ethtool' : 180,
   'ppc_40p' : 240,
   'ppc64_hv' : 1000,
   'ppc64_powernv' : 480,
   'ppc64_pseries' : 480,
+  'ppc64_replay' : 210,
   'ppc64_tuxrun' : 420,
   'ppc64_mac99' : 120,
   'riscv64_tuxrun' : 120,
@@ -48,6 +59,7 @@ test_timeouts = {
   'sh4_tuxrun' : 240,
   'virtio_balloon': 120,
   'x86_64_kvm_xen' : 180,
+  'x86_64_replay' : 480,
 }
 
 tests_generic_system = [
@@ -70,14 +82,18 @@ tests_aarch64_system_thorough = [
   'aarch64_aspeed',
   'aarch64_raspi3',
   'aarch64_raspi4',
+  'aarch64_replay',
+  'aarch64_reverse_debug',
   'aarch64_rme_virt',
   'aarch64_rme_sbsaref',
   'aarch64_sbsaref',
   'aarch64_sbsaref_alpine',
   'aarch64_sbsaref_freebsd',
+  'aarch64_smmu',
   'aarch64_tcg_plugins',
   'aarch64_tuxrun',
   'aarch64_virt',
+  'aarch64_virt_gpu',
   'aarch64_xen',
   'aarch64_xlnx_versal',
   'multiprocess',
@@ -89,6 +105,7 @@ tests_alpha_system_quick = [
 
 tests_alpha_system_thorough = [
   'alpha_clipper',
+  'alpha_replay',
 ]
 
 tests_arm_system_quick = [
@@ -99,8 +116,10 @@ tests_arm_system_thorough = [
   'arm_aspeed_ast1030',
   'arm_aspeed_palmetto',
   'arm_aspeed_romulus',
+  'arm_aspeed_witherspoon',
   'arm_aspeed_ast2500',
   'arm_aspeed_ast2600',
+  'arm_aspeed_bletchley',
   'arm_aspeed_rainier',
   'arm_bpim2u',
   'arm_canona1100',
@@ -112,6 +131,7 @@ tests_arm_system_thorough = [
   'arm_orangepi',
   'arm_quanta_gsj',
   'arm_raspi2',
+  'arm_replay',
   'arm_smdkc210',
   'arm_sx1',
   'arm_vexpress',
@@ -136,6 +156,7 @@ tests_i386_system_quick = [
 ]
 
 tests_i386_system_thorough = [
+  'i386_replay',
   'i386_tuxrun',
 ]
 
@@ -146,11 +167,13 @@ tests_loongarch64_system_thorough = [
 tests_m68k_system_thorough = [
   'm68k_mcf5208evb',
   'm68k_nextcube',
+  'm68k_replay',
   'm68k_q800',
   'm68k_tuxrun',
 ]
 
 tests_microblaze_system_thorough = [
+  'microblaze_replay',
   'microblaze_s3adsp1800'
 ]
 
@@ -171,6 +194,7 @@ tests_mipsel_system_thorough = [
 ]
 
 tests_mips64_system_thorough = [
+  'mips64_malta',
   'mips64_tuxrun',
 ]
 
@@ -183,6 +207,7 @@ tests_mips64el_system_thorough = [
 ]
 
 tests_or1k_system_thorough = [
+  'or1k_replay',
   'or1k_sim',
 ]
 
@@ -192,12 +217,12 @@ tests_ppc_system_quick = [
 ]
 
 tests_ppc_system_thorough = [
-  'ppc_405',
   'ppc_40p',
   'ppc_amiga',
   'ppc_bamboo',
   'ppc_mac',
   'ppc_mpc8544ds',
+  'ppc_replay',
   'ppc_sam460ex',
   'ppc_tuxrun',
   'ppc_virtex_ml507',
@@ -212,6 +237,8 @@ tests_ppc64_system_thorough = [
   'ppc64_hv',
   'ppc64_powernv',
   'ppc64_pseries',
+  'ppc64_replay',
+  'ppc64_reverse_debug',
   'ppc64_tuxrun',
   'ppc64_mac99',
 ]
@@ -240,6 +267,7 @@ tests_rx_system_thorough = [
 
 tests_s390x_system_thorough = [
   's390x_ccw_virtio',
+  's390x_replay',
   's390x_topology',
   's390x_tuxrun',
 ]
@@ -258,6 +286,7 @@ tests_sparc_system_quick = [
 ]
 
 tests_sparc_system_thorough = [
+  'sparc_replay',
   'sparc_sun4m',
 ]
 
@@ -291,11 +320,14 @@ tests_x86_64_system_thorough = [
   'x86_64_hotplug_blk',
   'x86_64_hotplug_cpu',
   'x86_64_kvm_xen',
+  'x86_64_replay',
+  'x86_64_reverse_debug',
   'x86_64_tuxrun',
 ]
 
 tests_xtensa_system_thorough = [
   'xtensa_lx60',
+  'xtensa_replay',
 ]
 
 precache_all = []
@@ -364,7 +396,7 @@ foreach speed : ['quick', 'thorough']
       # 'run_target' logic below & in Makefile.include
       test('func-' + testname,
            python,
-           depends: [test_deps, test_emulator, emulator_modules],
+           depends: [test_deps, test_emulator, emulator_modules, plugin_modules],
            env: test_env,
            args: [testpath],
            protocol: 'tap',

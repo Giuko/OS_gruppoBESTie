@@ -11,7 +11,7 @@
 #include "qapi/error.h"
 #include "hw/irq.h"
 #include "hw/loongarch/virt.h"
-#include "exec/address-spaces.h"
+#include "system/address-spaces.h"
 #include "hw/intc/loongarch_extioi.h"
 #include "trace.h"
 
@@ -343,7 +343,7 @@ static void loongarch_extioi_realize(DeviceState *dev, Error **errp)
     LoongArchExtIOIClass *lec = LOONGARCH_EXTIOI_GET_CLASS(dev);
     SysBusDevice *sbd = SYS_BUS_DEVICE(dev);
     Error *local_err = NULL;
-    int i, pin;
+    int i;
 
     lec->parent_realize(dev, &local_err);
     if (local_err) {
@@ -367,12 +367,6 @@ static void loongarch_extioi_realize(DeviceState *dev, Error **errp)
         s->features |= EXTIOI_VIRT_HAS_FEATURES;
     } else {
         s->status |= BIT(EXTIOI_ENABLE);
-    }
-
-    for (i = 0; i < s->num_cpu; i++) {
-        for (pin = 0; pin < LS3A_INTC_IP; pin++) {
-            qdev_init_gpio_out(dev, &s->cpu[i].parent_irq[pin], 1);
-        }
     }
 }
 
